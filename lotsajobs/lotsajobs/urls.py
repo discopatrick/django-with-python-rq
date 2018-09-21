@@ -16,6 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from sftp import views as sftp_views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', sftp_views.sftp_index, name='sftp_index'),
 ]
