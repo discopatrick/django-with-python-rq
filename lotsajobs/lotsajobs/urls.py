@@ -17,8 +17,10 @@ from django.contrib import admin
 from django.urls import path
 
 from sftp import views as sftp_views
+from jobs import views as jobs_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('jobs/', jobs_views.jobs_index, name='jobs_index'),
     path('', sftp_views.sftp_index, name='sftp_index'),
 ]
