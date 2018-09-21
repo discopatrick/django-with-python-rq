@@ -1,3 +1,5 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import SftpJob
+
+admin.site.register(SftpJob)
